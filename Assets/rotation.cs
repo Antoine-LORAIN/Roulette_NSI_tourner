@@ -3,16 +3,20 @@ using UnityEngine;
 public class Rotate : MonoBehaviour
 {
     [SerializeField]
-    private float rotSpeed = 2500f;
+    private float rotSpeed = Random.Range(2500, 5000);
+    public bool mustRoll = false;
 
     private void Update()
     {
-        Debug.Log(rotSpeed);
-        if (rotSpeed >= -49f)
-        {
-            RotateRoue(rotSpeed);
-            rotSpeed--;
-            Debug.Log(transform.rotation);
+        if (mustRoll) 
+            {
+            Debug.Log(rotSpeed);
+            if (rotSpeed >= -49f)
+            {
+                RotateRoue(rotSpeed);
+                rotSpeed--;
+                Debug.Log(transform.rotation);
+            }
         }
     }
 
