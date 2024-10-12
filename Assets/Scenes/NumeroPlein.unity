@@ -1380,6 +1380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ff146b923b46f478e6a4fed745c70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gp: {fileID: 11400000, guid: 238db6bc5539821459c9c2273439db94, type: 2}
+  startButton: {fileID: 1009473880}
 --- !u!1 &1935881346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,8 +1551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca70f4a67e18124fad4a5dc8bc31b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 2500
-  mustRoll: 0
+  gp: {fileID: 11400000, guid: 238db6bc5539821459c9c2273439db94, type: 2}
+  rotSpeed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
