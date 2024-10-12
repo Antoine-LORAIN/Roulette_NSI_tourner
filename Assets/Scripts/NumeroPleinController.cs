@@ -8,6 +8,7 @@ public class NumeroPleinController : MonoBehaviour
     [Header("Objects")]
     [SerializeField]
     private Button startButton;
+    [SerializeField]
 
     private void Start()
     {

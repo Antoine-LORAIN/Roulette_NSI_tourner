@@ -16,5 +16,5 @@ MonoBehaviour:
   version: DEV-1.0
   mustRoll: 0
   argentTotal: 100
-  rotSpeedMin: 2000
-  rotSpeedMax: 4000
+  rotSpeedMin: 500
+  rotSpeedMax: 750
