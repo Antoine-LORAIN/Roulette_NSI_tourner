@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ControllerCS : MonoBehaviour
+public class ControllerCSC : MonoBehaviour
 {
     [SerializeField]
     private GameProperties gp;
@@ -14,33 +14,38 @@ public class ControllerCS : MonoBehaviour
     private Button pairButton;
     [SerializeField]
     private Button impairButton;
+    [SerializeField]
+    private InputField mise;
+
     private void Start()
     {
         startButton.onClick.AddListener(switchMustRoll);
         pairButton.onClick.AddListener(Pair);
         impairButton.onClick.AddListener(Impair);
-        refreshArgent();
     }
 
-    void Update()
+    private void Update()
     {
         refreshArgent();
     }
 
-    private void switchMustRoll()
+    void switchMustRoll()
     {
+
         if (gp.canRoll)
         {
             gp.mustRoll = true;
-            gp.typeJeu = "CS";
         }
         else
         {
             gp.mustRoll = false;
         }
+        pairButton.enabled = false;
+        impairButton.enabled = false;
+        mise.enabled = false;
     }
 
-    private void refreshArgent()
+    void refreshArgent()
     {
         argentTotal.text = "Argent total : " + gp.argentTotal + "€";
     }

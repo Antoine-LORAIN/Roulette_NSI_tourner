@@ -29,6 +29,6 @@ public class MainMenuController : MonoBehaviour
 
     void ChanceSimple()
     {
-        Debug.Log("Chance Simple");
+        SceneManager.LoadScene("ChanceSimple");
     }
 }

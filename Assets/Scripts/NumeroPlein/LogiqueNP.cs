@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Logique : MonoBehaviour
+public class LogiqueNP : MonoBehaviour
 {
     [SerializeField]
     private GameProperties gp;
@@ -36,5 +36,7 @@ public class Logique : MonoBehaviour
             gp.argentTotal -= miseNB;
         }
         popup.SetActive(true);
+        mise.enabled = true;
+        numero.enabled = true;
     }
 }

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NumeroPlein.unity
     guid: 3fa8f2281a096f74ea5db6c669dca419
+  - enabled: 1
+    path: Assets/Scenes/ChanceSimple.unity
+    guid: f87ca00d5eb86b1418f49d606fba8dc6
   m_configObjects: {}

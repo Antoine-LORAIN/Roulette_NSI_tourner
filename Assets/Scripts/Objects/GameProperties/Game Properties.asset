@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Game Properties
   m_EditorClassIdentifier: 
   title: NSI Casino
-  version: DEV-1.0
+  version: 1.0-RELEASE
   mustRoll: 0
   canRoll: 1
-  rotSpeedMin: 1000
-  rotSpeedMax: 1500
-  argentTotal: 87
+  rotSpeedMin: 500
+  rotSpeedMax: 750
+  argentTotal: 100
   mise: 0
-  nombreTire: 23
-  nombreUser: 0
+  nombreTire: 17
+  isPair: pair

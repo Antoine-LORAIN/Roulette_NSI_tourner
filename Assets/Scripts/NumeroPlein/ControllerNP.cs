@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
-public class Controller : MonoBehaviour
+public class ControllerNP : MonoBehaviour
 {
     [SerializeField]
     private GameProperties gp;
@@ -13,6 +13,10 @@ public class Controller : MonoBehaviour
     private Transform triangle;
     [SerializeField]
     private Text argentTotal;
+    [SerializeField]
+    private InputField mise;
+    [SerializeField]
+    private InputField numero;
 
     private void Start()
     {
@@ -30,12 +34,13 @@ public class Controller : MonoBehaviour
         if (gp.canRoll)
         {
             gp.mustRoll = true;
-            gp.typeJeu = "NP";
         }
         else
         {
             gp.mustRoll = false;
         }
+        mise.enabled = false;
+        numero.enabled = false;
     }
 
     private void refreshArgent()
