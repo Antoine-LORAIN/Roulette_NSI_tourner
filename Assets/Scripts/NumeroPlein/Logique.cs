@@ -28,19 +28,19 @@ public class Logique : MonoBehaviour
 
     void Play()
     {
+        int miseNB = int.Parse(mise.text.ToString());
+
         if (numero.text == gp.nombreTire.ToString())
         {
-            int intmise = int.Parse(mise.text);
-
-            gp.argentTotal += intmise * 36;
-
             popupTitle.text = popupTexts.NPGtitle;
             popupContent.text = popupTexts.NPGcontent;
+            gp.argentTotal += miseNB * 36;
         }
         else
         {
             popupTitle.text = popupTexts.NPPtitle;
             popupContent.text = popupTexts.NPPcontent;
+            gp.argentTotal -= miseNB;
         }
         popup.SetActive(true);
     }

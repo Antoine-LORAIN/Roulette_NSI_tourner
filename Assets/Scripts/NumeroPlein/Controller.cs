@@ -19,6 +19,11 @@ public class NumeroPleinController : MonoBehaviour
         refreshArgent();
     }
 
+    void Update()
+    {
+        refreshArgent();
+    }
+
     private void switchMustRoll()
     {
         gp.mustRoll = true;

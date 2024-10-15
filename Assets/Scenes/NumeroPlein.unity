@@ -2083,6 +2083,8 @@ MonoBehaviour:
   gp: {fileID: 11400000, guid: 238db6bc5539821459c9c2273439db94, type: 2}
   rotSpeed: 0
   popup: {fileID: 364757083}
+  miseInput: {fileID: 1311763010}
+  numeroInput: {fileID: 355303922}
 --- !u!212 &2097842796
 SpriteRenderer:
   m_ObjectHideFlags: 0
