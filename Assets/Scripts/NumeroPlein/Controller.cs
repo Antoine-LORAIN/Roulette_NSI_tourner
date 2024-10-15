@@ -9,14 +9,23 @@ public class NumeroPleinController : MonoBehaviour
     [SerializeField]
     private Button startButton;
     [SerializeField]
+    private Transform triangle;
+    [SerializeField]
+    private Text argentTotal;
 
     private void Start()
     {
         startButton.onClick.AddListener(switchMustRoll);
+        refreshArgent();
     }
 
     private void switchMustRoll()
     {
         gp.mustRoll = true;
+    }
+
+    private void refreshArgent()
+    {
+        argentTotal.text = "Argent total : " + gp.argentTotal + "€";
     }
 }

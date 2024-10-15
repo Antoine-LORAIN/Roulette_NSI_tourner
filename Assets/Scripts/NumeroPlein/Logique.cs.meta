@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c70210aa47b378341821062696748650
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gp: {instanceID: 0}
+  - numero: {instanceID: 0}
+  - mise: {instanceID: 0}
+  - popup: {instanceID: 0}
+  - popupTitle: {instanceID: 0}
+  - popupContent: {instanceID: 0}
+  - popupTexts: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
