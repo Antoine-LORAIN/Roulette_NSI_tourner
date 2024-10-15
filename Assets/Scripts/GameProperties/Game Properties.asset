@@ -15,9 +15,10 @@ MonoBehaviour:
   title: NSI Casino
   version: DEV-1.0
   mustRoll: 0
+  canRoll: 1
   rotSpeedMin: 1000
   rotSpeedMax: 1500
-  argentTotal: 20953741
+  argentTotal: 87
   mise: 0
-  nombreTire: 36
+  nombreTire: 23
   nombreUser: 0

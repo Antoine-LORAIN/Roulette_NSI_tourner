@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,11 @@ public class rotation : MonoBehaviour
     private InputField miseInput;
     [SerializeField]
     private InputField numeroInput;
+    [Header("Script de la logique")]
+    [SerializeField]
+    private Logique logique;
+    [SerializeField]
+    private LogiqueCS logiqueCS;
     private float currentRotation;
 
     private List<int> nombreRoue = new List<int>() {0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24, 16, 33, 1, 20, 14 ,31, 9, 22, 18, 29, 7, 28, 12, 35, 3, 26 };
@@ -25,7 +31,7 @@ public class rotation : MonoBehaviour
 
     private void Update()
     {
-        if (gp.mustRoll)
+        if (gp.mustRoll && gp.canRoll)
         {
             popup.SetActive(false);
             miseInput.enabled = false;
@@ -40,10 +46,24 @@ public class rotation : MonoBehaviour
                 getNumber();
                 gp.mustRoll = false;
                 rotSpeed = UnityEngine.Random.Range(gp.rotSpeedMin, gp.rotSpeedMax);
+                if (gp.typeJeu == "NP") { 
+                    logique.Play(); 
+                }
+                else{ logiqueCS.Play(); }
             }
         }
 
         float rotation = transform.rotation.eulerAngles.z;
+
+        if (miseInput.text != "" && numeroInput.text != "")
+        {
+
+            gp.canRoll = true;
+        }
+        else
+        {
+            gp.canRoll = false;
+        }
     }
 
     private void rotate(float speed)

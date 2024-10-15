@@ -1,8 +1,7 @@
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
-public class Controller : MonoBehaviour
+public class ControllerCS : MonoBehaviour
 {
     [SerializeField]
     private GameProperties gp;
@@ -10,13 +9,16 @@ public class Controller : MonoBehaviour
     [SerializeField]
     private Button startButton;
     [SerializeField]
-    private Transform triangle;
-    [SerializeField]
     private Text argentTotal;
-
+    [SerializeField]
+    private Button pairButton;
+    [SerializeField]
+    private Button impairButton;
     private void Start()
     {
         startButton.onClick.AddListener(switchMustRoll);
+        pairButton.onClick.AddListener(Pair);
+        impairButton.onClick.AddListener(Impair);
         refreshArgent();
     }
 
@@ -30,7 +32,7 @@ public class Controller : MonoBehaviour
         if (gp.canRoll)
         {
             gp.mustRoll = true;
-            gp.typeJeu = "NP";
+            gp.typeJeu = "CS";
         }
         else
         {
@@ -41,5 +43,15 @@ public class Controller : MonoBehaviour
     private void refreshArgent()
     {
         argentTotal.text = "Argent total : " + gp.argentTotal + "€";
+    }
+
+    void Pair()
+    {
+        gp.isPair = "pair";
+    }
+
+    void Impair()
+    {
+        gp.isPair = "impair";
     }
 }

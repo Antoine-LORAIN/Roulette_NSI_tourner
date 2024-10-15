@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Logique : MonoBehaviour
+public class LogiqueCS : MonoBehaviour
 {
     [SerializeField]
     private GameProperties gp;
@@ -23,18 +23,9 @@ public class Logique : MonoBehaviour
     {
         int miseNB = int.Parse(mise.text.ToString());
 
-        if (numero.text == gp.nombreTire.ToString())
+        if (gp.nombreTire % 2 == 0 && gp.isPair == "pair")
         {
-            popupTitle.text = popupTexts.NPGtitle;
-            popupContent.text = popupTexts.NPGcontent;
-            gp.argentTotal += miseNB * 36;
+            Debug.Log("OK")
         }
-        else
-        {
-            popupTitle.text = popupTexts.NPPtitle;
-            popupContent.text = popupTexts.NPPcontent;
-            gp.argentTotal -= miseNB;
-        }
-        popup.SetActive(true);
     }
 }
